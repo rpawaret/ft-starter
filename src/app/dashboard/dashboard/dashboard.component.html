@@ -1,0 +1,52 @@
+<div class="p-grid p-align-center">
+  <div
+    class="p-col-12 p-md-8 hidden-sm-down"
+    style="height: 120px; border: 2px solid violet;"
+  >
+    Asset Price
+  </div>
+  <div class="p-col-12 p-md-4" style="height: 120px; border: 2px solid blue;">
+    Unrealized P/L
+  </div>
+</div>
+
+<br />
+<div class="p-grid">
+  <div class="p-col-12 p-md-8" style="border: 2px solid green;">
+    <p-chart
+      type="line"
+      [data]="lineChartData"
+      [options]="lineChartOptions"
+      (onDataSelect)="selectData($event)"
+    ></p-chart>
+  </div>
+  <div class="p-col-12 p-md-4" style="border: 2px solid red;">
+    <p-chart
+      type="pie"
+      [data]="pieChartData"
+      [options]="pieChartOptions"
+      (onDataSelect)="selectData($event)"
+    ></p-chart>
+  </div>
+</div>
+<br />
+<div class="p-grid">
+  <div class="p-col-12 p-md-8" style="border: 2px solid orange;">
+    Advertise
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6">
+        <div style="height: 50px; background: coral;">
+          Link 1
+        </div>
+      </div>
+      <div class="p-col-12 p-md-6">
+        <div style="height: 50px; background: coral;">
+          Link 2
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-12 p-md-4" style="border: 2px solid black;">
+    <div style="height: 120px;">Share</div>
+  </div>
+</div>
